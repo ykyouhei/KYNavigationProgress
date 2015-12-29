@@ -16,9 +16,8 @@ internal final class ProgressView: UIView {
     
     internal var progress: Float = 0 {
         didSet {
-            guard let superview = superview else { return }
             progress = min(1, progress)
-            barWidthConstraint.constant = superview.frame.width * CGFloat(progress)
+            barWidthConstraint.constant = bounds.width * CGFloat(progress)
         }
     }
     
@@ -29,6 +28,13 @@ internal final class ProgressView: UIView {
     private let defaultTrackColor = UIColor.clearColor()
     
     private let barWidthConstraint: NSLayoutConstraint
+    
+    override var bounds: CGRect {
+        didSet {
+            let tmpProgress = progress
+            progress = tmpProgress
+        }
+    }
     
     
     /* ====================================================================== */
@@ -50,12 +56,6 @@ internal final class ProgressView: UIView {
             constant: frame.width * CGFloat(progress))
         
         super.init(frame: frame)
-        
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: "deviceDidRotate:",
-            name: UIDeviceOrientationDidChangeNotification,
-            object: nil)
         
         let leftConstraint = NSLayoutConstraint(
             item: bar,
@@ -97,21 +97,12 @@ internal final class ProgressView: UIView {
             bottomConstraint])
     }
     
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(
-            self,
-            name: UIDeviceOrientationDidChangeNotification,
-            object: nil)
-    }
-    
     
     /* ====================================================================== */
     // MARK: - Notification
     /* ====================================================================== */
     
     func deviceDidRotate(notification: NSNotification) {
-        let tmpProgress = progress
-        progress = tmpProgress
     }
     
     

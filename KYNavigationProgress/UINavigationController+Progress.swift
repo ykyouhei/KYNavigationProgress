@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let constraintIdentifier = "progressHeightConstraint"
+
 public extension UINavigationController {
     
     /* ====================================================================== */
@@ -18,12 +20,15 @@ public extension UINavigationController {
      Default is 2.0
     */
     public var progressHeight: CGFloat {
-        get { return progressView.frame.height }
+        get {
+            return navigationBar.constraints
+                .filter{ $0.identifier == constraintIdentifier }
+                .first?.constant ?? 0.2
+        }
         set {
-            var frame = progressView.frame
-            frame.size.height = newValue
-            frame.origin.y = navigationBar.frame.height - newValue
-            progressView.frame = frame
+            navigationBar.constraints
+                .filter{ $0.identifier == constraintIdentifier }
+                .first?.constant = newValue
         }
     }
     
@@ -63,7 +68,6 @@ public extension UINavigationController {
         }
         
         let defaultHeight = CGFloat(2)
-        
         let frame = CGRect(
             x: 0,
             y: navigationBar.frame.height - defaultHeight,
@@ -72,7 +76,31 @@ public extension UINavigationController {
         )
         let progressView = ProgressView(frame: frame)
         
+        progressView.translatesAutoresizingMaskIntoConstraints = false
+        
         navigationBar.addSubview(progressView)
+        
+        let progressHeightConstraint = NSLayoutConstraint(
+            item: progressView,
+            attribute: .Height,
+            relatedBy: .Equal,
+            toItem: nil,
+            attribute: .NotAnAttribute,
+            multiplier: 1,
+            constant: defaultHeight)
+        progressHeightConstraint.identifier = constraintIdentifier
+        
+        navigationBar.addConstraint(progressHeightConstraint)
+        navigationBar.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|-0-[progressView]-0-|",
+            options: [],
+            metrics: nil,
+            views: ["progressView" : progressView]))
+        navigationBar.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:[progressView]-0-|",
+            options: [],
+            metrics: nil,
+            views: ["progressView" : progressView]))
         
         return progressView
     }
@@ -97,6 +125,7 @@ public extension UINavigationController {
      While progress is changed to 1.0, the bar will fade out. After that, progress will be 0.0.
     */
     public func finishProgress() {
+        progressView.bar.alpha = 1
         progressView.setProgress(1, animated: true)
         
         UIView.animateWithDuration(0.25,
