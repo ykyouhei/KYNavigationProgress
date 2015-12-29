@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Sample
 //
-//  Created by 山口　恭兵 on 2015/12/29.
-//  Copyright © 2015年 kyo__hei. All rights reserved.
+//  Created by kyo__hei on 2015/12/29.
+//  Copyright (c) 2015 kyo__hei. All rights reserved.
 //
 
 import UIKit
