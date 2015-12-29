@@ -24,12 +24,19 @@ class ViewController: UIViewController {
         navigationController!.cancelProgress()
     }
     
+    @IBAction func handleValueChanged(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0: navigationController?.progressTintColor = UIColor.redColor()
+        case 1: navigationController?.progressTintColor = UIColor.greenColor()
+        case 2: navigationController?.progressTintColor = UIColor.blueColor()
+        default: break
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        navigationController!.progressTintColor = UIColor.redColor()
-        navigationController!.trackTintColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2)
-        navigationController!.progressHeight = 10
     }
 
     override func didReceiveMemoryWarning() {
