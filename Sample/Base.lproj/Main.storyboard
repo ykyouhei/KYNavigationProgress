@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--KYNavigationProgress-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,6 +38,17 @@
                                     <action selector="didTapCancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jcv-8u-oYe"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="JgK-gD-JAB">
+                                <rect key="frame" x="223" y="409" width="155" height="29"/>
+                                <segments>
+                                    <segment title="Red"/>
+                                    <segment title="Green"/>
+                                    <segment title="Blue"/>
+                                </segments>
+                                <connections>
+                                    <action selector="handleValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kh4-Ry-wll"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -46,10 +57,12 @@
                             <constraint firstItem="Tro-YM-oCw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-24" id="CcI-3b-1Fm"/>
                             <constraint firstItem="Tro-YM-oCw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gvp-at-2bs"/>
                             <constraint firstItem="SRh-Ql-QRx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="32" id="LEy-KR-Szp"/>
+                            <constraint firstItem="JgK-gD-JAB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MWf-aT-3v9"/>
                             <constraint firstItem="uwV-pA-mFv" firstAttribute="top" secondItem="SRh-Ql-QRx" secondAttribute="bottom" constant="16" id="fHr-AY-p5C"/>
+                            <constraint firstItem="JgK-gD-JAB" firstAttribute="top" secondItem="uwV-pA-mFv" secondAttribute="bottom" constant="16" id="jXj-ZP-DyC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="5Lk-1h-dwf"/>
+                    <navigationItem key="navigationItem" title="KYNavigationProgress" id="5Lk-1h-dwf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
