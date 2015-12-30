@@ -20,15 +20,10 @@ public extension UINavigationController {
      Default is 2.0
     */
     public var progressHeight: CGFloat {
-        get {
-            return navigationBar.constraints
-                .filter{ $0.identifier == constraintIdentifier }
-                .first?.constant ?? 0.2
-        }
+        get { return progressView.frame.height }
         set {
-            navigationBar.constraints
-                .filter{ $0.identifier == constraintIdentifier }
-                .first?.constant = newValue
+            progressView.frame.origin.y = navigationBar.frame.height - newValue
+            progressView.frame.size.height = newValue
         }
     }
     
@@ -76,31 +71,12 @@ public extension UINavigationController {
         )
         let progressView = ProgressView(frame: frame)
         
-        progressView.translatesAutoresizingMaskIntoConstraints = false
-        
         navigationBar.addSubview(progressView)
         
-        let progressHeightConstraint = NSLayoutConstraint(
-            item: progressView,
-            attribute: .Height,
-            relatedBy: .Equal,
-            toItem: nil,
-            attribute: .NotAnAttribute,
-            multiplier: 1,
-            constant: defaultHeight)
-        progressHeightConstraint.identifier = constraintIdentifier
+        progressView.autoresizingMask = [
+            .FlexibleWidth, .FlexibleTopMargin
+        ]
         
-        navigationBar.addConstraint(progressHeightConstraint)
-        navigationBar.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-0-[progressView]-0-|",
-            options: [],
-            metrics: nil,
-            views: ["progressView" : progressView]))
-        navigationBar.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[progressView]-0-|",
-            options: [],
-            metrics: nil,
-            views: ["progressView" : progressView]))
         
         return progressView
     }

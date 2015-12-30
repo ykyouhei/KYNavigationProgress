@@ -29,7 +29,7 @@ internal final class ProgressView: UIView {
     
     private let barWidthConstraint: NSLayoutConstraint
     
-    override var bounds: CGRect {
+    override var frame: CGRect {
         didSet {
             let tmpProgress = progress
             progress = tmpProgress
