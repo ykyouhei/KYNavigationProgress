@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mTp-kI-Fl8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mTp-kI-Fl8">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--KYNavigationProgress-->
@@ -14,43 +15,39 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tro-YM-oCw">
-                                <rect key="frame" x="285" y="261" width="30" height="30"/>
                                 <state key="normal" title="Up"/>
                                 <connections>
-                                    <action selector="didTapUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIe-uZ-xEj"/>
+                                    <action selector="didTapUpButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1qi-bN-ZR5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRh-Ql-QRx">
-                                <rect key="frame" x="280" y="317" width="41" height="30"/>
                                 <state key="normal" title="Finish"/>
                                 <connections>
-                                    <action selector="didTapFinishButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="olU-Ko-J7S"/>
+                                    <action selector="didTapFinishButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MxJ-IZ-jzU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwV-pA-mFv">
-                                <rect key="frame" x="276" y="363" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <action selector="didTapCancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jcv-8u-oYe"/>
+                                    <action selector="didTapCancelButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EHG-Bh-4l6"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="JgK-gD-JAB">
-                                <rect key="frame" x="223" y="409" width="155" height="29"/>
                                 <segments>
                                     <segment title="Red"/>
                                     <segment title="Green"/>
                                     <segment title="Blue"/>
                                 </segments>
                                 <connections>
-                                    <action selector="handleValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kh4-Ry-wll"/>
+                                    <action selector="handleValueChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="cSm-9a-NRt"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SRh-Ql-QRx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5hv-pE-ddB"/>
                             <constraint firstItem="uwV-pA-mFv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="99T-sS-Yv9"/>

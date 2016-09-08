@@ -23,11 +23,11 @@ internal final class ProgressView: UIView {
     
     internal let bar = UIView()
     
-    private let defaultBarColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1)
+    fileprivate let defaultBarColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1)
     
-    private let defaultTrackColor = UIColor.clearColor()
+    fileprivate let defaultTrackColor = UIColor.clear
     
-    private let barWidthConstraint: NSLayoutConstraint
+    fileprivate let barWidthConstraint: NSLayoutConstraint
     
     override var frame: CGRect {
         didSet {
@@ -48,10 +48,10 @@ internal final class ProgressView: UIView {
     override init(frame: CGRect) {
         barWidthConstraint = NSLayoutConstraint(
             item: bar,
-            attribute: .Width,
-            relatedBy: .Equal,
+            attribute: .width,
+            relatedBy: .equal,
             toItem: nil,
-            attribute: .NotAnAttribute,
+            attribute: .notAnAttribute,
             multiplier: 1,
             constant: frame.width * CGFloat(progress))
         
@@ -59,28 +59,28 @@ internal final class ProgressView: UIView {
         
         let leftConstraint = NSLayoutConstraint(
             item: bar,
-            attribute: .Left,
-            relatedBy: .Equal,
+            attribute: .left,
+            relatedBy: .equal,
             toItem: self,
-            attribute: .Left,
+            attribute: .left,
             multiplier: 1,
             constant: 0)
         
         let bottomConstraint = NSLayoutConstraint(
             item: bar,
-            attribute: .Bottom,
-            relatedBy: .Equal,
+            attribute: .bottom,
+            relatedBy: .equal,
             toItem: self,
-            attribute: .Bottom,
+            attribute: .bottom,
             multiplier: 1,
             constant: 0)
         
         let topConstraint = NSLayoutConstraint(
             item: bar,
-            attribute: .Top,
-            relatedBy: .Equal,
+            attribute: .top,
+            relatedBy: .equal,
             toItem: self,
-            attribute: .Top,
+            attribute: .top,
             multiplier: 1,
             constant: 0)
         
@@ -102,7 +102,7 @@ internal final class ProgressView: UIView {
     // MARK: - Notification
     /* ====================================================================== */
     
-    func deviceDidRotate(notification: NSNotification) {
+    func deviceDidRotate(_ notification: Notification) {
     }
     
     
@@ -110,14 +110,14 @@ internal final class ProgressView: UIView {
     // MARK: - Method
     /* ====================================================================== */
     
-    internal func setProgress(progress: Float, animated: Bool) {
-        let duration: NSTimeInterval = animated ? 0.1 : 0
+    internal func setProgress(_ progress: Float, animated: Bool) {
+        let duration: TimeInterval = animated ? 0.1 : 0
         
         self.progress = progress
         
-        UIView.animateWithDuration(duration) {
+        UIView.animate(withDuration: duration, animations: {
             self.layoutIfNeeded()
-        }
+        }) 
     }
 
 }

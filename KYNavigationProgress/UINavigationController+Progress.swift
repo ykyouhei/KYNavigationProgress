@@ -55,7 +55,7 @@ public extension UINavigationController {
     }
     
     
-    private var progressView: ProgressView {
+    fileprivate var progressView: ProgressView {
         for subview in navigationBar.subviews {
             if let progressView = subview as? ProgressView {
                 return progressView
@@ -74,7 +74,7 @@ public extension UINavigationController {
         navigationBar.addSubview(progressView)
         
         progressView.autoresizingMask = [
-            .FlexibleWidth, .FlexibleTopMargin
+            .flexibleWidth, .flexibleTopMargin
         ]
         
         
@@ -92,7 +92,7 @@ public extension UINavigationController {
     - parameter progress: The new progress value.
     - parameter animated: true if the change should be animated, false if the change should happen immediately.
     */
-    public func setProgress(progress: Float, animated: Bool) {
+    public func setProgress(_ progress: Float, animated: Bool) {
         progressView.bar.alpha = 1
         progressView.setProgress(progress, animated: animated)
     }
@@ -104,7 +104,7 @@ public extension UINavigationController {
         progressView.bar.alpha = 1
         progressView.setProgress(1, animated: true)
         
-        UIView.animateWithDuration(0.25,
+        UIView.animate(withDuration: 0.25,
             animations: {
                 self.progressView.bar.alpha = 0
             }, completion: { finished in
@@ -119,9 +119,9 @@ public extension UINavigationController {
     public func cancelProgress() {
         progressView.setProgress(0, animated: true)
         
-        UIView.animateWithDuration(0.25) {
+        UIView.animate(withDuration: 0.25, animations: {
             self.progressView.bar.alpha = 0
-        }
+        }) 
     }
     
 }
