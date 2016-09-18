@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     
     @IBAction func handleValueChanged(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-        case 0: navigationController?.progressTintColor = UIColor.redColor()
-        case 1: navigationController?.progressTintColor = UIColor.greenColor()
-        case 2: navigationController?.progressTintColor = UIColor.blueColor()
+        case 0: navigationController?.progressTintColor = UIColor.red
+        case 1: navigationController?.progressTintColor = UIColor.green
+        case 2: navigationController?.progressTintColor = UIColor.blue
         default: break
         }
     }
