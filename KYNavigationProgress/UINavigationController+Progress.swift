@@ -55,7 +55,7 @@ public extension UINavigationController {
     }
     
     
-    fileprivate var progressView: ProgressView {
+    private var progressView: ProgressView {
         for subview in navigationBar.subviews {
             if let progressView = subview as? ProgressView {
                 return progressView

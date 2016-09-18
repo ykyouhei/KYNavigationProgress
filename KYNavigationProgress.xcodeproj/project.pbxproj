@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C2A91C171C32782F006D1CAE /* KYNavigationProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A91C161C32782F006D1CAE /* KYNavigationProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2A91C1E1C32782F006D1CAE /* KYNavigationProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A91C131C32782F006D1CAE /* KYNavigationProgress.framework */; };
-		C2A91C231C32782F006D1CAE /* KYNavigationProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A91C221C32782F006D1CAE /* KYNavigationProgressTests.swift */; };
 		C2A91C341C327872006D1CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A91C331C327872006D1CAE /* AppDelegate.swift */; };
 		C2A91C361C327872006D1CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A91C351C327872006D1CAE /* ViewController.swift */; };
 		C2A91C391C327872006D1CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A91C371C327872006D1CAE /* Main.storyboard */; };
@@ -22,13 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C2A91C1F1C32782F006D1CAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C2A91C0A1C32782F006D1CAE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C2A91C121C32782F006D1CAE;
-			remoteInfo = KYNavigationProgress;
-		};
 		C2A91C491C328C1C006D1CAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2A91C0A1C32782F006D1CAE /* Project object */;
@@ -56,9 +47,6 @@
 		C2A91C131C32782F006D1CAE /* KYNavigationProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KYNavigationProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A91C161C32782F006D1CAE /* KYNavigationProgress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYNavigationProgress.h; sourceTree = "<group>"; };
 		C2A91C181C32782F006D1CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2A91C1D1C32782F006D1CAE /* KYNavigationProgressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KYNavigationProgressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2A91C221C32782F006D1CAE /* KYNavigationProgressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYNavigationProgressTests.swift; sourceTree = "<group>"; };
-		C2A91C241C32782F006D1CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2A91C311C327872006D1CAE /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A91C331C327872006D1CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2A91C351C327872006D1CAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,14 +66,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2A91C1A1C32782F006D1CAE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2A91C1E1C32782F006D1CAE /* KYNavigationProgress.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C2A91C2E1C327872006D1CAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				C2A91C151C32782F006D1CAE /* KYNavigationProgress */,
-				C2A91C211C32782F006D1CAE /* KYNavigationProgressTests */,
 				C2A91C321C327872006D1CAE /* Sample */,
 				C2A91C141C32782F006D1CAE /* Products */,
 			);
@@ -111,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				C2A91C131C32782F006D1CAE /* KYNavigationProgress.framework */,
-				C2A91C1D1C32782F006D1CAE /* KYNavigationProgressTests.xctest */,
 				C2A91C311C327872006D1CAE /* Sample.app */,
 			);
 			name = Products;
@@ -126,15 +104,6 @@
 				C2A91C181C32782F006D1CAE /* Info.plist */,
 			);
 			path = KYNavigationProgress;
-			sourceTree = "<group>";
-		};
-		C2A91C211C32782F006D1CAE /* KYNavigationProgressTests */ = {
-			isa = PBXGroup;
-			children = (
-				C2A91C221C32782F006D1CAE /* KYNavigationProgressTests.swift */,
-				C2A91C241C32782F006D1CAE /* Info.plist */,
-			);
-			path = KYNavigationProgressTests;
 			sourceTree = "<group>";
 		};
 		C2A91C321C327872006D1CAE /* Sample */ = {
@@ -182,24 +151,6 @@
 			productReference = C2A91C131C32782F006D1CAE /* KYNavigationProgress.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C2A91C1C1C32782F006D1CAE /* KYNavigationProgressTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C2A91C2A1C32782F006D1CAE /* Build configuration list for PBXNativeTarget "KYNavigationProgressTests" */;
-			buildPhases = (
-				C2A91C191C32782F006D1CAE /* Sources */,
-				C2A91C1A1C32782F006D1CAE /* Frameworks */,
-				C2A91C1B1C32782F006D1CAE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C2A91C201C32782F006D1CAE /* PBXTargetDependency */,
-			);
-			name = KYNavigationProgressTests;
-			productName = KYNavigationProgressTests;
-			productReference = C2A91C1D1C32782F006D1CAE /* KYNavigationProgressTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C2A91C301C327872006D1CAE /* Sample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2A91C401C327872006D1CAE /* Build configuration list for PBXNativeTarget "Sample" */;
@@ -226,14 +177,10 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = kyo__hei;
 				TargetAttributes = {
 					C2A91C121C32782F006D1CAE = {
-						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
-					};
-					C2A91C1C1C32782F006D1CAE = {
 						CreatedOnToolsVersion = 7.2;
 						LastSwiftMigration = 0800;
 					};
@@ -256,7 +203,6 @@
 			projectRoot = "";
 			targets = (
 				C2A91C121C32782F006D1CAE /* KYNavigationProgress */,
-				C2A91C1C1C32782F006D1CAE /* KYNavigationProgressTests */,
 				C2A91C301C327872006D1CAE /* Sample */,
 			);
 		};
@@ -264,13 +210,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		C2A91C111C32782F006D1CAE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C2A91C1B1C32782F006D1CAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,14 +238,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2A91C191C32782F006D1CAE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2A91C231C32782F006D1CAE /* KYNavigationProgressTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C2A91C2D1C327872006D1CAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,11 +250,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C2A91C201C32782F006D1CAE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C2A91C121C32782F006D1CAE /* KYNavigationProgress */;
-			targetProxy = C2A91C1F1C32782F006D1CAE /* PBXContainerItemProxy */;
-		};
 		C2A91C4A1C328C1C006D1CAE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C2A91C121C32782F006D1CAE /* KYNavigationProgress */;
@@ -364,8 +290,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -413,8 +341,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -434,6 +364,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -446,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -466,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -481,33 +414,11 @@
 			};
 			name = Release;
 		};
-		C2A91C2B1C32782F006D1CAE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = KYNavigationProgressTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kyo--hei.KYNavigationProgressTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		C2A91C2C1C32782F006D1CAE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = KYNavigationProgressTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kyo--hei.KYNavigationProgressTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 		C2A91C411C327872006D1CAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -519,8 +430,8 @@
 		C2A91C421C327872006D1CAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -546,15 +457,6 @@
 			buildConfigurations = (
 				C2A91C281C32782F006D1CAE /* Debug */,
 				C2A91C291C32782F006D1CAE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C2A91C2A1C32782F006D1CAE /* Build configuration list for PBXNativeTarget "KYNavigationProgressTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C2A91C2B1C32782F006D1CAE /* Debug */,
-				C2A91C2C1C32782F006D1CAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
