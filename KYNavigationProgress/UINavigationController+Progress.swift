@@ -32,8 +32,8 @@ public extension UINavigationController {
      default is clear color.
     */
     public var trackTintColor: UIColor? {
-        get { return progressView.backgroundColor }
-        set { progressView.backgroundColor = newValue }
+        get { return progressView.trackTintColor }
+        set { progressView.trackTintColor = newValue }
     }
     
     /**
@@ -41,8 +41,8 @@ public extension UINavigationController {
      default is (r: 0, g: 122, b: 225, a: 255.
     */
     public var progressTintColor: UIColor? {
-        get { return progressView.bar.backgroundColor }
-        set { progressView.bar.backgroundColor = newValue }
+        get { return progressView.progressTintColor }
+        set { progressView.progressTintColor = newValue }
     }
     
     /**
