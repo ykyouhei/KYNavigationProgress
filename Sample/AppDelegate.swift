@@ -16,10 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
 		// Override point for customization after application launch.
-		
-		ProgressView.appearance().progressTintColor = .green
-		ProgressView.appearance().trackTintColor = .red
-		
 		return true
 	}
 	

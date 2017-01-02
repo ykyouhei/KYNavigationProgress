@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KYNavigationProgress"
-  s.version      = "2.0.0"
+  s.version      = "2.0.1"
   s.summary      = "KYNavigationProgress is simple extension of UINavigationController to display progress on the UINavigationBar."
   s.homepage     = "https://github.com/ykyouhei/KYNavigationProgress"
   s.license      = "MIT"
