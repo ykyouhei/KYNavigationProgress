@@ -23,13 +23,13 @@ public final class ProgressView: UIView {
 	
 	internal let bar = UIView()
 	
-	public dynamic var progressTintColor: UIColor? = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1) {
+	@objc public dynamic var progressTintColor: UIColor? = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1) {
 		didSet {
 			bar.backgroundColor = progressTintColor
 		}
 	}
 	
-	public dynamic var trackTintColor: UIColor? = .clear {
+	@objc public dynamic var trackTintColor: UIColor? = .clear {
 		didSet {
 			backgroundColor = trackTintColor
 		}
