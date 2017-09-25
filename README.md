@@ -4,7 +4,7 @@
 [![Pod Version](http://img.shields.io/cocoapods/v/KYNavigationProgress.svg?style=flat)](http://cocoadocs.org/docsets/KYNavigationProgress/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/KYNavigationProgress.svg?style=flat)](http://cocoadocs.org/docsets/KYNavigationProgress/)
 [![Pod License](http://img.shields.io/cocoapods/l/KYNavigationProgress.svg?style=flat)](https://github.com/ykyohei/KYNavigationProgress/blob/master/LICENSE)
-![Swift version](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift version](https://img.shields.io/badge/swift-4.0-orange.svg)
 
 `KYNavigationProgress` is simple extension of UINavigationController to display progress on the UINavigationBar.
 
