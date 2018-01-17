@@ -92,19 +92,19 @@ public extension UINavigationController {
     - parameter progress: The new progress value.
     - parameter animated: true if the change should be animated, false if the change should happen immediately.
     */
-    public func setProgress(_ progress: Float, animated: Bool) {
+    public func setProgress(_ progress: Float, animated: Bool, withDuration duration: TimeInterval = 0.1) {
         progressView.bar.alpha = 1
-        progressView.setProgress(progress, animated: animated)
+        progressView.setProgress(progress, animated: animated, withDuration: duration)
     }
     
     /**
      While progress is changed to 1.0, the bar will fade out. After that, progress will be 0.0.
     */
-    public func finishProgress() {
+    public func finishProgress(withDuration duration: TimeInterval = 0.1, fadeOutWithDuration fadeDuration: TimeInterval = 0.25) {
         progressView.bar.alpha = 1
-        progressView.setProgress(1, animated: true)
+        progressView.setProgress(1, animated: true, withDuration: duration)
         
-        UIView.animate(withDuration: 0.25,
+        UIView.animate(withDuration: fadeDuration,
             animations: {
                 self.progressView.bar.alpha = 0
             }, completion: { finished in
@@ -116,10 +116,10 @@ public extension UINavigationController {
     /**
      While progress is changed to 0.0, the bar will fade out.
     */
-    public func cancelProgress() {
-        progressView.setProgress(0, animated: true)
+    public func cancelProgress(withDuration duration: TimeInterval = 0.1, fadeOutWithDuration fadeDuration: TimeInterval = 0.25) {
+        progressView.setProgress(0, animated: true, withDuration: duration)
         
-        UIView.animate(withDuration: 0.25, animations: {
+        UIView.animate(withDuration: fadeDuration, animations: {
             self.progressView.bar.alpha = 0
         }) 
     }

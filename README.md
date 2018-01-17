@@ -43,12 +43,17 @@ self.navigationController?.progress = 0.5
 
 // set progress with animation.
 self.navigationController?.setProgress(0.1, animated: true)
+self.navigationController?.setProgress(0.1, animated: true, withDuration: 0.5)
 
-// finish progress.
+// finish progress with animation.
 self.navigationController?.finishProgress()
+self.navigationController?.finishProgress(withDuration: 0.5)
+self.navigationController?.finishProgress(withDuration: 0.5, fadeOutWithDuration: 3)
 
-// cancel progress.
+// cancel progress with animation.
 self.navigationController?.cancelProgress()
+self.navigationController?.cancelProgress(withDuration: 0.5)
+self.navigationController?.cancelProgress(withDuration: 0.5, fadeOutWithDuration: 3)
 ```
 
 ### Custom

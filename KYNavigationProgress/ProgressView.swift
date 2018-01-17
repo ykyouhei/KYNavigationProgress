@@ -118,8 +118,8 @@ public final class ProgressView: UIView {
 	// MARK: - Method
 	/* ====================================================================== */
 	
-	internal func setProgress(_ progress: Float, animated: Bool) {
-		let duration: TimeInterval = animated ? 0.1 : 0
+	internal func setProgress(_ progress: Float, animated: Bool, withDuration duration: TimeInterval = 0.1) {
+		let duration: TimeInterval = animated ? duration : 0
 		
 		self.progress = progress
 		
